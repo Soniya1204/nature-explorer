@@ -1,0 +1,121 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4fff8;
+}
+
+.section-title {
+  color: #145a32;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero-section {
+  height: 100vh;
+  background: url("../images/hero.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+/* FACT BOX */
+.fact-box {
+  background: #e9f7ef;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ACCOUNT SECTION */
+.account-section {
+  background: url("../images/tree-montreal-protocol-forest-800x600-1.jpeg") center/cover no-repeat;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.account-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+}
+
+.glass-card {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  padding: 30px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  color: #fff;
+}
+
+.glass-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+.glass-card button {
+  width: 100%;
+  background: #1e7c62;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background: #0a370a;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+.switch span {
+  color: #b6ffb6;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #198754; /* Bootstrap green */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+}
+
