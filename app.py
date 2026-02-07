@@ -10,12 +10,12 @@ CORS(app)
 app.secret_key = "nature_explorer_secret_key"
 
 # ---------------- DATABASE ----------------
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="",
-    database="nature_explorer"
-)
+# db = mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     password="",
+#     database="nature_explorer"
+# )
 
 cursor = db.cursor(dictionary=True)
 
