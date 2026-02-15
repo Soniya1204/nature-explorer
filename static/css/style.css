@@ -90,11 +90,12 @@ body {
 }
 
 .tabs button {
-  background: #0a370a;
+  background: #07965b;
   color: white;
   border: none;
   padding: 8px 20px;
   border-radius: 8px;
+ 
 }
 
 .switch span {

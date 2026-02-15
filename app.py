@@ -6,24 +6,24 @@ import hashlib
 app = Flask(__name__)
 CORS(app)
 
-# 🔐 REQUIRED FOR SESSION
+#  REQUIRED FOR SESSION
 app.secret_key = "nature_explorer_secret_key"
 
 # ---------------- DATABASE ----------------
-# db = mysql.connector.connect(
-#     host="localhost",
-#     user="root",
-#     password="",
-#     database="nature_explorer"
-# )
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="nature_explorer"
+)
 
 cursor = db.cursor(dictionary=True)
 
-# ---------------- PASSWORD HASH ----------------
+
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
-# ---------------- HOME PAGE (SHOW POSTS) ----------------
+
 @app.route("/")
 def index():
     cursor.execute("""
@@ -36,7 +36,7 @@ def index():
     return render_template("index.html", posts=posts)
 
 
-# ---------------- ABOUT PAGE ----------------
+
 @app.route("/about")
 def about():
     if "user_id" not in session:
@@ -108,13 +108,12 @@ def add_post():
         )
         db.commit()
 
-        # 🔁 redirect to HOME PAGE
+        # redirect to HOME PAGE
         return redirect("/")
 
     return render_template("add_post.html")
 
 
-# ---------------- SAVE POST ----------------
 @app.route("/save-post", methods=["POST"])
 def save_post():
     if "user_id" not in session:
@@ -129,7 +128,7 @@ def save_post():
     )
     db.commit()
 
-    return redirect("/")   # redirect to homepage to view post
+    return redirect("/")   
 
 # ---------------- RUN SERVER ----------------
 if __name__ == "__main__":
